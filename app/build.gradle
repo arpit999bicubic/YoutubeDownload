@@ -31,6 +31,5 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.0.0'
     compile 'com.github.Commit451.YouTubeExtractor:youtubeextractor:2.1.0'
-    compile 'com.github.HaarigerHarald:android-youtubeExtractor:master-SNAPSHOT'
     testCompile 'junit:junit:4.12'
 }

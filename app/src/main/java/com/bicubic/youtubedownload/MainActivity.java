@@ -37,25 +37,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        For android youtube extractor library  com.github.HaarigerHarald:android-youtubeExtractor:master-SNAPSHOT
 
-        /*String youtubeLink = "https://www.youtube.com/watch?v=Q5EnvdWKlHw";
-
-        YouTubeUriExtractor ytEx = new YouTubeUriExtractor(this) {
-            @Override
-            public void onUrisAvailable(String videoId, String videoTitle, SparseArray<YtFile> ytFiles) {
-                if (ytFiles != null) {
-                    int itag = 22;
-                    String downloadUrl = ytFiles.get(itag).getUrl();
-                    Toast.makeText(MainActivity.this, "url : "+downloadUrl, Toast.LENGTH_SHORT).show();
-                    Log.i("", "onUrisAvailable: url : "+downloadUrl );
-                }
-            }
-        };
-
-        ytEx.execute(youtubeLink);*/
-
-/*Recommanded Library */
 //        For android youtube extractor library  com.github.Commit451.YouTubeExtractor:youtubeextractor:2.1.0'
 
         mExtractor.extract(YOUTUBE_ID).enqueue(mExtractionCallback);
@@ -71,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void bindVideoResult(YouTubeExtractionResult result) {
+
+//        Here you can get download url link
+
         Log.d("OnSuccess", "Got a result with the best url: " + result.getBestAvailableQualityVideoUri());
 
         Toast.makeText(this, "result : " + result.getSd360VideoUri(), Toast.LENGTH_SHORT).show();
